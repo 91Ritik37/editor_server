@@ -16,7 +16,7 @@ const defaultValue = " ";
 
 const io = require("socket.io")(3001, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://editor-nine-rho.vercel.app/documents/a4e51162-9987-477d-8beb-29ccc538e338 ",
         methods: ["GET", "POST"],
     }
 });
