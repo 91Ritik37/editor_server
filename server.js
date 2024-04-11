@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Document = require("./model/Document");
+const cors = require('cors');
 mongoose.connect("mongodb+srv://onworkonline9892:FNEUmeXvlbi9oNMh@majorproject.zqrazwf.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -16,10 +17,12 @@ const defaultValue = " ";
 
 const io = require("socket.io")(3001, {
     cors: {
-        origin: "https://editor-nine-rho.vercel.app/documents/a4e51162-9987-477d-8beb-29ccc538e338 ",
+        origin: "https://editor-nine-rho.vercel.app",
         methods: ["GET", "POST"],
     }
-});
+}
+
+);
 
 
 io.on("connection", socket => {
